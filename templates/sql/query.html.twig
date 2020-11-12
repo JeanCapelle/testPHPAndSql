@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+{% block body %}
+	{% include('navbar.html.twig') %}
+	<div class="container">
+	    <h1>Sql</h1>    
+        <code> {{query}}</code>
+		<table class="table">
+			<tr>
+				<td>name</td>
+				<td>author</td>
+				<td>comment</td>
+				<td>grade</td>
+				<td>review_date</td>
+			</tr>
+			{% for key, line in result %}
+				<tr>
+					<td>{{ line.name }}</td>
+					<td>{{ line.author }}</td>
+					<td>{{ line.comment }}</td>
+					<td>{{ line.grade }}</td>
+					<td>{{ line.review_date }}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}

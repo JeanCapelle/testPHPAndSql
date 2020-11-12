@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+{% form_theme formQuestion 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+	{% include('navbar.html.twig') %}
+	<div class="container">
+		<h1>Algo</h1>
+		<h2>Insérer votre chaine</h2>
+		<p>
+			Cette phrase doit obligatoirement contenir la séparation (---) et chaque lien d'amitié doit être sur une ligne
+		</p>
+		{{ form(formQuestion) }}
+    </div>
+
+	{% endblock %}
